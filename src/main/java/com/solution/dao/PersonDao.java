@@ -47,4 +47,12 @@ public class PersonDao {
 		}
 	}
 
+	public Person updatePerson(String name, Person person) {
+		if(personRepository.containsKey(name)){
+			personRepository.put(name, person);
+			return person;
+		}
+		return null;
+	}
+
 }

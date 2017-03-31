@@ -47,6 +47,12 @@ public class PersonController {
 		return personService.createPerson(person);
 	}
 	
+	@RequestMapping(value="/update", method=RequestMethod.POST)
+	@ResponseBody
+	public Person updatePerson(@RequestBody Person person) {
+		return personService.updatePerson(person);
+	}
+	
 	@RequestMapping(value="/get/{name}", method=RequestMethod.GET)
 	@ResponseBody
 	public Person getPerson(@PathVariable("name") String name, HttpServletRequest req) {

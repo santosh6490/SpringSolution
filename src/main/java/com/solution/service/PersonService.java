@@ -30,4 +30,12 @@ public class PersonService {
 		personDao.deletePerson(name);
 	}
 
+	public Person updatePerson(Person person) {
+		String name = null;
+		if(person != null){
+			name = person.getName();
+		}
+		return personDao.updatePerson(name,person);
+	}
+
 }
